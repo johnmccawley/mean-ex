@@ -46,7 +46,7 @@
                 <!-- LOOP OVER THE TASKS IN $scope.tasks -->
                 <div class="checkbox" ng-repeat="task in tasks">
                     <label>
-                        <input type="checkbox" ng-click="deleteTodo(task._id)"> {{ task.text }}
+                        <input type="checkbox" ng-click="deleteTask(task._id)"> {{ task.text }}
                     </label>
                 </div>
 
