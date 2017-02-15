@@ -21,9 +21,12 @@ app.use(methodOverride());
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
-mongoose.connect(database.url);// connect to mongoDB database
+mongoose.connect(database.url); // connect to mongoDB database
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
+
+// load the routes
+require('./app/routes')(app);
 
 // listen (start app with node server.js) ======================================
 app.listen(port, ip);
