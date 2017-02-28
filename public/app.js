@@ -1,4 +1,4 @@
-// public/core.js
+// public/app.js
 var helloTaskList = angular.module('helloTaskList', []);
 
 function MainCtrl($scope, $http) {
