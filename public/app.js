@@ -47,4 +47,5 @@ var helloTaskList = angular.module('helloTaskList', [])
                console.log('Error: ' + data);
              }
          );
-    }
+    };
+  }
