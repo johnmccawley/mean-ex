@@ -1,7 +1,7 @@
 // public/app.js
-var helloTaskList = angular.module('helloTaskList', []);
+var helloTaskList = angular.module('helloTaskList', [])
 
-angular.module('helloTaskList').controller('MainCtrl', function ($scope, $http) {
+  .controller('MainCtrl', function ($scope, $http) {
     $scope.formData = {};
 
     // when landing on the page, get all tasks and show them
