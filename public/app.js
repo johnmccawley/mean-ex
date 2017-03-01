@@ -7,14 +7,14 @@ var helloTaskList = angular.module('helloTaskList', [])
             // when landing on the page, get all tasks and show them
             $http.get('/api/tasks')
                 .then(
-                    function(data) {
+                    function(response) {
                         // success callback
-                        $scope.tasks = data;
-                        console.log(data);
+                        $scope.tasks = response.data;
+                        console.log(response.data);
                     },
-                    function(data) {
+                    function(error) {
                         // failure call back
-                        console.log('Error: ' + data);
+                        console.log('Error: ' + error);
                     }
                 );
 
@@ -22,13 +22,13 @@ var helloTaskList = angular.module('helloTaskList', [])
             $scope.createTask = function() {
                 $http.post('/api/tasks', $scope.formData)
                     .then(
-                        function(data) {
+                        function(response) {
                             $scope.formData = {}; // clear the form so our user is ready to enter another
-                            $scope.tasks = data;
-                            console.log(data);
+                            $scope.tasks = response.data;
+                            console.log(response.data);
                         },
-                        function(data) {
-                            console.log('Error: ' + data);
+                        function(error) {
+                            console.log('Error: ' + error);
                         }
                     );
             };
@@ -37,14 +37,14 @@ var helloTaskList = angular.module('helloTaskList', [])
             $scope.deleteTask = function(id) {
                 $http.delete('/api/tasks/' + id)
                     .then(
-                        function(data) {
+                        function(response) {
                             // success callback
-                            $scope.tasks = data;
-                            console.log(data);
+                            $scope.tasks = response.data;
+                            console.log(response.data);
                         },
-                        function(data) {
+                        function(error) {
                             // failure call back
-                            console.log('Error: ' + data);
+                            console.log('Error: ' + error);
                         }
                     );
             };
