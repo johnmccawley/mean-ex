@@ -1,7 +1,7 @@
 // public/app.js
 var helloTaskList = angular.module('helloTaskList', []);
 
-function MainCtrl($scope, $http) {
+angular.module('helloTaskList').controller('MainCtrl', function ($scope, $http) {
     $scope.formData = {};
 
     // when landing on the page, get all tasks and show them
@@ -39,4 +39,4 @@ function MainCtrl($scope, $http) {
             });
     };
 
-}
+});
