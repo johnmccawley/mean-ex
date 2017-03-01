@@ -5,14 +5,26 @@ var helloTaskList = angular.module('helloTaskList', [])
     $scope.formData = {};
 
     // when landing on the page, get all tasks and show them
-    $http.get('/api/tasks')
-        .success(function(data) {
-            $scope.tasks = data;
-            console.log(data);
-        })
-        .error(function(data) {
-            console.log('Error: ' + data);
-        });
+    $http({
+      method: 'GET',
+      url: '/api/tasks'
+   }).then(function (data){
+        $scope.tasks = data;
+        console.log(data);
+   },function (data){
+        console.log('Error: ' + data);
+   });
+    
+    
+    
+//    $http.get('/api/tasks')
+//        .success(function(data) {
+//            $scope.tasks = data;
+//            console.log(data);
+//        })
+//        .error(function(data) {
+//            console.log('Error: ' + data);
+//        });
 
     // when submitting the add form, send the text to the node API
     $scope.createTask = function() {
