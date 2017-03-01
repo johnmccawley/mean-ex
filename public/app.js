@@ -42,7 +42,7 @@ var helloTaskList = angular.module('helloTaskList', [])
                             $scope.tasks = data;
                             console.log(data);
                         },
-                        function(response) {
+                        function(data) {
                             // failure call back
                             console.log('Error: ' + data);
                         }
