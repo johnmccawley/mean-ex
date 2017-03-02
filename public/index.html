@@ -56,39 +56,14 @@
     <div class="jumbotron text-center">
         <h1>You have {{ tasks.length }} items in your task list</h1>
     </div>
-
-    <div class="container" style="margin-top:20px;">
-  	   <div class="row">
-          <div class="col-xs-6">
-              <h3 class="text-center">Basic Example</h3>
-              <div class="well" style="max-height: 300px;overflow: auto;">
-          		<ul class="list-group checked-list-box">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item" data-checked="true">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                  </ul>
-              </div>
-          </div>
-  	   </div>
-  </div>
-    <div class='container-fluid'>
+    <div class='container'>
         <!-- TASK LIST -->
         <div id="task-list" class="row">
             <div class="col-lg-6">
                 <div class="input-group">
-                    <!--<span class="input-group-addon"> -->
-                    <!-- LOOP OVER THE TASKS IN $scope.tasks -->
-                    <span class="input-group-addon" ng-repeat="task in tasks track by $index">
-                          <input type="checkbox" aria-label="..." ng-click="deleteTask(task._id)"> {{ task.text }}
-                  </span>
-                    <!-- </span> -->
+                    <div class="checkbox" ng-repeat="task in tasks track by $index">
+                        <input type="checkbox" aria-label="..." ng-click="deleteTask(task._id)"> {{ task.text }}
+                    </div>
                 </div>
             </div>
         </div>
