@@ -59,9 +59,12 @@
     <div class='container'>
         <!-- TASK LIST -->
         <div id="task-list" class="row">
-            <div class="col-lg-6 col-lg-offset-6">
-                  <div class="checkbox" ng-repeat="task in tasks track by $index">
-                      <input type="checkbox" ng-click="deleteTask(task._id)"> {{ task.text }}
+            <div class="col-sm-8 col-sm-offset-3">
+                  <div class="checkbox" ng-repeat="task in tasks">
+                    <label>
+                      <input type="checkbox" ng-click="deleteTask(task._id)">
+                      {{ task.text }}
+                    </label>
                   </div>
             </div>
         </div>
@@ -77,7 +80,7 @@
                     </div>
 
                     <!-- createTask() WILL CREATE NEW TASKS -->
-                    <button type="submit" class="btn btn-primary btn-lg" ng-click="createTask()">Add</button>
+                    <button type="submit" class="btn btn-primary btn-lg" style="background-color: #65bc45; border-color: green;" ng-click="createTask()">Add</button>
                 </form>
             </div>
         </div>
