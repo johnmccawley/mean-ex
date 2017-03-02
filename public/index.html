@@ -50,12 +50,12 @@
         <div id="task-list" class="row">
             <div class="col-lg-6">
               <div class="input-group">
-                <span class="input-group-addon">
+                <!--<span class="input-group-addon"> -->
                   <!-- LOOP OVER THE TASKS IN $scope.tasks -->
-                  <div class="checkbox" ng-repeat="task in tasks track by $index">
-                          <input type="checkbox" ng-click="deleteTask(task._id)"> {{ task.text }}
+                  <div class="input-group-addon" ng-repeat="task in tasks track by $index">
+                          <input type="checkbox" aria-label="..." ng-click="deleteTask(task._id)"> {{ task.text }}
                   </div>
-                </span>
+                <!-- </span> -->
               </div>
             </div>
         </div>
