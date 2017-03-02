@@ -48,15 +48,17 @@
     <div class='container-fluid'>
         <!-- TASK LIST -->
         <div id="task-list" class="row">
-            <div class="col-sm-4 col-sm-offset-4">
-
-                <!-- LOOP OVER THE TASKS IN $scope.tasks -->
-                <div class="checkbox" ng-repeat="task in tasks track by $index">
-                    <label>
-                        <input type="checkbox" ng-click="deleteTask(task._id)"> {{ task.text }}
-                    </label>
-                </div>
-
+            <div class="col-lg-6">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <!-- LOOP OVER THE TASKS IN $scope.tasks -->
+                  <div class="checkbox" ng-repeat="task in tasks track by $index">
+                      <label>
+                          <input type="checkbox" ng-click="deleteTask(task._id)"> {{ task.text }}
+                      </label>
+                  </div>
+                </span>
+              </div>
             </div>
         </div>
 
