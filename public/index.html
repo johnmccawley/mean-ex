@@ -59,12 +59,10 @@
     <div class='container'>
         <!-- TASK LIST -->
         <div id="task-list" class="row">
-            <div class="col-lg-6">
-                <div class="input-group">
-                    <div class="checkbox" ng-repeat="task in tasks track by $index">
-                        <input type="checkbox" aria-label="..." ng-click="deleteTask(task._id)"> {{ task.text }}
-                    </div>
-                </div>
+            <div class="col-lg-6 col-lg-offset-6">
+                  <div class="checkbox" ng-repeat="task in tasks track by $index">
+                      <input type="checkbox" ng-click="deleteTask(task._id)"> {{ task.text }}
+                  </div>
             </div>
         </div>
 
