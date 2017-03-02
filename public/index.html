@@ -16,7 +16,8 @@
 
     <style>
         .jumbotron {
-            background-color:  #65bc45; /* Digital Garage Green */
+            background-color: #65bc45;
+            /* Digital Garage Green */
             color: #ffffff;
             padding: 100px 25px;
         }
@@ -38,6 +39,7 @@
 </head>
 
 <!-- add our angularjs module and controller -->
+
 <body ng-app="helloTaskList" ng-controller="MainCtrl">
 
     <!-- page header and task count -->
@@ -45,18 +47,42 @@
         <h1>You have {{ tasks.length }} items in your task list</h1>
     </div>
 
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-addon">
+        <input type="checkbox" aria-label="...">
+      </span>
+                <input type="text" class="form-control" aria-label="...">
+            </div>
+            <!-- /input-group -->
+        </div>
+        <!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-addon">
+        <input type="radio" aria-label="...">
+      </span>
+                <input type="text" class="form-control" aria-label="...">
+            </div>
+            <!-- /input-group -->
+        </div>
+        <!-- /.col-lg-6 -->
+    </div>
+    <!-- /.row -->
+
     <div class='container-fluid'>
         <!-- TASK LIST -->
         <div id="task-list" class="row">
             <div class="col-lg-6">
-              <div class="input-group">
-                <!--<span class="input-group-addon"> -->
-                  <!-- LOOP OVER THE TASKS IN $scope.tasks -->
-                  <span class="input-group-addon" ng-repeat="task in tasks track by $index">
+                <div class="input-group">
+                    <!--<span class="input-group-addon"> -->
+                    <!-- LOOP OVER THE TASKS IN $scope.tasks -->
+                    <span class="input-group-addon" ng-repeat="task in tasks track by $index">
                           <input type="checkbox" aria-label="..." ng-click="deleteTask(task._id)"> {{ task.text }}
                   </span>
-                <!-- </span> -->
-              </div>
+                    <!-- </span> -->
+                </div>
             </div>
         </div>
 
