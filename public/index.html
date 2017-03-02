@@ -53,9 +53,7 @@
                 <span class="input-group-addon">
                   <!-- LOOP OVER THE TASKS IN $scope.tasks -->
                   <div class="checkbox" ng-repeat="task in tasks track by $index">
-                      <label>
                           <input type="checkbox" ng-click="deleteTask(task._id)"> {{ task.text }}
-                      </label>
                   </div>
                 </span>
               </div>
