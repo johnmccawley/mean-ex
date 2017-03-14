@@ -21,19 +21,23 @@
             color: #ffffff;
             padding: 100px 25px;
         }
+
         .container-fluid {
             padding: 60px 50px;
         }
+
         .state-icon {
-          left: -5px;
+            left: -5px;
         }
+
         .list-group-item-primary {
-          color: rgb(255, 255, 255);
-          background-color: rgb(66, 139, 202);
+            color: rgb(255, 255, 255);
+            background-color: rgb(66, 139, 202);
         }
         /* DEMO ONLY - REMOVES UNWANTED MARGIN */
+
         .well .list-group {
-          margin-bottom: 0px;
+            margin-bottom: 0px;
         }
     </style>
 
@@ -60,12 +64,12 @@
         <!-- TASK LIST -->
         <div id="task-list" class="row">
             <div class="col-sm-8 col-sm-offset-3">
-                  <div class="checkbox" ng-repeat="task in tasks">
+                <div class="checkbox" ng-repeat="task in tasks">
                     <label>
                       <input type="checkbox" ng-click="deleteTask(task._id)">
                       {{ task.text }}
                     </label>
-                  </div>
+                </div>
             </div>
         </div>
 
