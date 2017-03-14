@@ -65,6 +65,7 @@ mean-ex
   │   └── index.html
   ├── package.json -npm configuration to install dependencies/modules
   ├── README.md
+  ├── tests - files for basic test scripts
   └── server.js -Node configuration
 
 ```
