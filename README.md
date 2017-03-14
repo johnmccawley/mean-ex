@@ -33,7 +33,8 @@ We can also [create new apps using template files](http://docs.thedigitalgarage.
 
 Looking at the repo, you'll notice one file in the openshift/templates directory:
 
-	mean-ex
+```
+mean-ex
   ├── app
   ├── config
   │   └── database.js
@@ -47,7 +48,7 @@ Looking at the repo, you'll notice one file in the openshift/templates directory
 	├── package.json
   ├── README.md
 	└── server.js
-
+```
 We can create the the new app from the `qs-nodejs-mongo.json` template by using the `-f` flag and pointing the tool at a path to the template file:
 
         $ oc new-app -f /path/to/qs-nodejs-mongo.json
